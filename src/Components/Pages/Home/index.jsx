@@ -1,14 +1,17 @@
 import { Style } from "@material-ui/icons";
 import React from "react";
 import Intro from "./Elements/IntroArea";
-import Service from "./Elements/allWelServices"
-import About from "./Elements/About"
-import ServiceArea from "./Elements/Service"
+import Service from "./Elements/allWelServices";
+import About from "./Elements/About";
+import ServiceArea from "./Elements/Service";
+import Counter from "./Elements/Counter";
+import Quote from "./Elements/quoteArea";
 import { makeStyles, Button, Container, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
    FixPadding: {
       padding: "110px 0px",
+      overflow: "hidden",
       "@media(max-width:991px)": {
          padding: "50px",
       },
@@ -16,15 +19,22 @@ const useStyles = makeStyles({
          padding: "20px",
       },
    },
-   WelcomeArea: {
-      
-   },
+   WelcomeArea: {},
    About: {
-      "& .MuiGrid-root":{
-         width:"100%"
-      }
-   }
-
+      "& .MuiGrid-root": {
+         width: "100%",
+      },
+   },
+   CounterArea: {
+      "& .MuiGrid-container": {
+         alignItems: "center",
+      },
+   },
+   Quote: {
+      height: "auto",
+      width: "100%",
+      background: "#062241",
+   },
 });
 
 const Footer = () => {
@@ -34,14 +44,20 @@ const Footer = () => {
          <section className={Style.Intro}>
             <Intro />
          </section>
-         <section className={Style.WelcomeArea}  className={Style.FixPadding}>
+         <section className={Style.WelcomeArea} className={Style.FixPadding}>
             <Service />
          </section>
-         <section className={Style.About} >
+         <section className={Style.About}>
             <About />
          </section>
-         <section className={`${Style.ServiceArea} ${Style.FixPadding}`} >
+         <section className={`${Style.ServiceArea} ${Style.FixPadding}`}>
             <ServiceArea />
+         </section>
+         <section className={`${Style.CounterArea} ${Style.FixPadding}`}>
+            <Counter />
+         </section>
+         <section className={`${Style.Quote} ${Style.FixPadding}`}>
+            <Quote />
          </section>
       </>
    );
