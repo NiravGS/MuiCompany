@@ -6,6 +6,7 @@ import About from "./Elements/About";
 import ServiceArea from "./Elements/Service";
 import Counter from "./Elements/Counter";
 import Quote from "./Elements/quoteArea";
+import Slider from "./Elements/Slider"
 import { makeStyles, Button, Container, Grid } from "@material-ui/core";
 
 const useStyles = makeStyles({
@@ -13,10 +14,10 @@ const useStyles = makeStyles({
       padding: "110px 0px",
       overflow: "hidden",
       "@media(max-width:991px)": {
-         padding: "50px",
+         padding: "50px 0",
       },
       "@media(max-width:767px)": {
-         padding: "20px",
+         padding: "20px 0",
       },
    },
    WelcomeArea: {},
@@ -58,6 +59,9 @@ const Footer = () => {
          </section>
          <section className={`${Style.Quote} ${Style.FixPadding}`}>
             <Quote />
+         </section>
+         <section >
+            {/* <Slider /> */}
          </section>
       </>
    );

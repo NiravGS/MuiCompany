@@ -21,6 +21,9 @@ const useStyles = makeStyles({
       "@media(max-width:767px)": {
         height: "inherit",
       },
+      "& .MuiContainer-root":{
+         textAlign: "center",
+      }
    },
    bgWrapper: {
       "& img": {
@@ -84,6 +87,7 @@ const useStyles = makeStyles({
          marginBottom: "20px",
          textTransform: "capitalize",
          marginTop: "0",
+         margin:"auto",
          "@media(max-width: 991px) and (min-width: 768px)": {
             color: "#fff",
             fontSize: "27px",
@@ -107,6 +111,7 @@ const useStyles = makeStyles({
          lineHeight: "30px",
          maxWidth: "460px",
          color: "#fff",
+         margin:"auto",
          "@media(max-width: 991px)": {
             margin: "auto",
          },
